@@ -7,7 +7,7 @@ from pandas_datareader import data as pdr
 # get the stock
 yf.pdr_override()
 endDate = dt.datetime.now()
-stock = "ilmn" #input("Ticker Symbol: ")
+stock = input("Ticker Symbol: ")
 
 #set a start date
 start = input("Start Date: ")
