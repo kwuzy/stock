@@ -9,7 +9,7 @@ yf.pdr_override()
 endDate = dt.datetime.now()
 stock = input("Ticker Symbol: ")
 
-#set a start dates
+#set a start date
 start = input("Start Date: ")
 if (start == ""):
     startYear = 2019
