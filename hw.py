@@ -4,12 +4,17 @@ def split(word):
     return [char for char in word]
 
 
-def countX(lst): 
-    count = 0
-    for ele in lst: 
-        if (lst[index + 1] == ele): 
+def countX(lst, idx): 
+    count = 1
+    i = idx
+    while i < len(lst): 
+        if (lst[idx + 1] == lst[idx]): 
             count = count + 1
+            i+=1
+        else:
+            break
     return count 
+
 
 def unique(list): 
   
@@ -23,16 +28,20 @@ def unique(list):
             unique_list.append(x) 
     return unique_list
 
-def encode(unique_list,msg):
+def encode(msg):
 
     # initialize a null list
     encodedArray = []
+    j = 0
 
     # traverse for all unique elements
-    for ele in unique_list:
+    while j < len(msg):
+
         # add unique and count to new array
-        encodedArray.append(ele)
-        encodedArray.append(countX(msg, ele))
+        encodedArray.append(msg[j])
+        encodedArray.append(countX(msg , j))
+        j = j + countX(msg,j)
+        print(j)
     return encodedArray
 
 def toString(array):
@@ -46,8 +55,8 @@ def toString(array):
     return string
 
 
-# wordArray = split(word)
+wordArray = split(word)
 # uniqueArray = unique(split(word))
-# encodedArray = encode(uniqueArray,wordArray)
-# encodedMsg = toString(encodedArray)
-# print(encodedMsg)
+encodedArray = encode(wordArray)
+encodedMsg = toString(encodedArray)
+print(encodedMsg)
