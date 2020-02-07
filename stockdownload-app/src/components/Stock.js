@@ -19,7 +19,7 @@ export default function Stock() {
         <div>
             <div className="stock-input">
                 <Input placeholder="Ticker Symbol" onChange={handleStockChange} />
-                <Button onClick={handleSearch} color="primary" variant="outlined">Load</Button>
+                <Button className="submit-button" onClick={handleSearch} color="primary" variant="outlined">Load</Button>
             </div>
         </div>
     )
