@@ -8,11 +8,13 @@ export default function Stock() {
 
     function handleStockChange(event) {
         setStock(event.target.value);
-        console.log(stock);
+        // for testing
+        // console.log(stock);
     }
 
     function handleSearch(event) {
-        console.log(`Stock is: ${stock}`);
+        // for testing
+        // console.log(`Stock is: ${stock}`);
     }
 
     return (
