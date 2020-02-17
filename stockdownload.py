@@ -36,7 +36,17 @@ print(startDate)
 df = pdr.get_data_yahoo(stock, startDate, endDate)
 
 #print and export the data
+maxOpen = max(df.Open)
+print("Full set")
 print(df)
-exportName = "C:\\Users\\kevin.wu\\Documents\\python\\exports\\" + stock + " " + startExport + ".xlsx"
-print(exportName)
-export_excel = df.to_excel(exportName)
+print("Highest open")
+print(maxOpen)
+print("Top 5s of open")
+print(df.nlargest(5, ['Open']))
+print(df.nsmallest(5, ['Open']))
+print("Top 5s of volume")
+print(df.nlargest(5, ['Volume']))
+print(df.nsmallest(5, ['Volume']))
+#exportName = "C:\\Users\\kevin.wu\\Documents\\python\\exports\\" + stock + " " + startExport + ".xlsx"
+#print(exportName)
+#export_excel = df.to_excel(exportName)
