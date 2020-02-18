@@ -10,6 +10,11 @@ pylint = "*"
 django = "*"
 djangorestframework = "*"
 django-rest-knox = "*"
+pandas = "*"
+numpy = "*"
+yfinance = "*"
+datetime = "*"
+pandas-datareader = "*"
 
 [requires]
 python_version = "3.8"
