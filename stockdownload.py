@@ -50,3 +50,5 @@ print(df.nsmallest(5, ['Volume']))
 #exportName = "C:\\Users\\kevin.wu\\Documents\\python\\exports\\" + stock + " " + startExport + ".xlsx"
 #print(exportName)
 #export_excel = df.to_excel(exportName)
+
+#https://youtu.be/Uyei2iDA4Hs?t=657
